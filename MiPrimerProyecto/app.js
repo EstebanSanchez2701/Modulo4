@@ -39,7 +39,7 @@ app.put("/contactos/:idParam", (req, resp) => {
 app.delete("/contactos/:idParam", (req, resp) => {
     const id = req.params.idParam;
     console.log("id: " , id)
-    resp.send();
+    resp.send({id:id});
 })
 
 app.listen(puerto, () => { //levanta un servidor web en mi pc local recibe dos parametros 1 el puerto en que se levanta y 2 la funcion que se ejecuta

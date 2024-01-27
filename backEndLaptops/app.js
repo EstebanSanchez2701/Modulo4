@@ -51,7 +51,7 @@ app.put("/laptops/:idParam", (req, resp) => {
 app.delete("/laptops/:idParam", (req, resp) => {
     const id = req.params.idParam;
     console.log("Se elimino el id: ", id)
-    resp.send();
+    resp.send({id:id});
 })
 
 app.listen(puerto, () => { //levanta un servidor web en mi pc local recibe dos parametros 1 el puerto en que se levanta y 2 la funcion que se ejecuta
